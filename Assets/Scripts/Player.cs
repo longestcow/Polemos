@@ -38,9 +38,6 @@ public class Player : NetworkBehaviour
     private NetworkVariable<bool> gunLineEnable = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
 
-
-    
-
     public override void OnNetworkSpawn()
     {
         playerColor = new Color(Random.Range(50f,200f)/255f, Random.Range(50f,200f)/255f, Random.Range(50f,200f)/255f);

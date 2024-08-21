@@ -19,6 +19,7 @@ public class TestRelay : MonoBehaviour
         AuthenticationService.Instance.SignedIn += () => {
             Debug.Log("Signed in "+AuthenticationService.Instance.PlayerId);
         };
+
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
     }
 
@@ -51,4 +52,6 @@ public class TestRelay : MonoBehaviour
             return true;
         } catch(RelayServiceException e){ Debug.Log(e); return false;}
     }
+
+    
 }
